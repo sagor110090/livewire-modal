@@ -1,7 +1,4 @@
-Here’s an updated version of the README including the necessary import statements in `app.js` for the JavaScript and CSS files:
-
----
-
+ 
 # Laravel Livewire Modal Package
 
 [![Latest Version](https://img.shields.io/github/v/release/sagor110090/livewire-modal.svg?style=flat-square)](https://packagist.org/packages/sagor110090/livewire-modal)
