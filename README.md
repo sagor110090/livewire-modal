@@ -1,52 +1,126 @@
-# Very short description of the package
+Here’s an updated version of the README with the package version included at the top:
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mehedi hasan sagor/livewire modal .svg?style=flat-square)](https://packagist.org/packages/mehedi hasan sagor/livewire modal )
-[![Total Downloads](https://img.shields.io/packagist/dt/mehedi hasan sagor/livewire modal .svg?style=flat-square)](https://packagist.org/packages/mehedi hasan sagor/livewire modal )
-![GitHub Actions](https://github.com/mehedi hasan sagor/livewire modal /actions/workflows/main.yml/badge.svg)
+---
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+# Laravel Livewire Modal Package
+
+[![Latest Version](https://img.shields.io/github/v/release/sagor110090/livewire-modal.svg?style=flat-square)](https://packagist.org/packages/sagor110090/livewire-modal)
+
+A simple and flexible Laravel Livewire modal package that works seamlessly with any design framework like Bootstrap, Tailwind CSS, or even custom styles. This package allows you to quickly integrate modals into your Livewire projects without being tied to specific CSS libraries.
+
+## Features
+
+- **Framework-Agnostic**: Use with Bootstrap, Tailwind CSS, or custom designs.
+- **Dynamic Modals**: Open and close modals using Livewire events.
+- **Customizable**: Easily style your modals with your preferred CSS.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
-composer require mehedi hasan sagor/livewire modal 
+composer require sagor110090/livewire-modal
 ```
 
 ## Usage
 
+### Opening a Modal
+
+To open a modal, you can dispatch a Livewire event from any button or action:
+
+```html
+<button wire:click="$dispatch('openModal', { component: 'edit-user', data: { id: {{ $user->id }} } })">
+    Open Modal
+</button>
+```
+
+- **component**: The name of the Livewire component you want to load.
+- **data**: The data you want to pass to the component (e.g., user ID).
+
+### Closing a Modal
+
+To close a modal, simply dispatch the close event:
+
+```html
+<button type="button" wire:click="$dispatch('closeModal')">
+    Cancel
+</button>
+```
+
+### Sample Livewire Component
+
+Here’s an example of a Livewire component you might use with this package:
+
 ```php
-// Usage description here
+<?php
+
+namespace App\Livewire;
+
+use App\Models\User;
+use Livewire\Component;
+
+class EditUser extends Component
+{
+    public $user;
+
+    public function mount($id)
+    {
+        $this->user = User::find($id);
+    }
+
+    public function render()
+    {
+        return view('livewire.edit-user');
+    }
+}
 ```
 
-### Testing
+### Blade View Example
 
-```bash
-composer test
+The modal content is fully customizable within your Livewire component's view file:
+
+```blade
+<!-- resources/views/livewire/edit-user.blade.php -->
+<div>
+    <h2>Edit User: {{ $user->name }}</h2>
+    <!-- Your form or content here -->
+</div>
 ```
 
-### Changelog
+You can use any CSS framework or custom styles in this view file. The package does not impose any specific design restrictions.
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+## Example Styles
 
-## Contributing
+You can design the modal with any framework. Below is an example using Tailwind CSS:
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+```blade
+<div class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+    <div class="bg-white rounded-lg shadow-lg p-6">
+        <!-- Modal Content -->
+    </div>
+</div>
+```
 
-### Security
+Alternatively, use Bootstrap or any other CSS framework.
 
-If you discover any security related issues, please email mehedihasansagor.cse@gmail.com instead of using the issue tracker.
+## Why Use This Package?
 
-## Credits
+- **Flexibility**: Unlike many modal packages, this one doesn't enforce a specific CSS framework, giving you full control over your design.
+- **Ease of Use**: Simple to implement with just a few Livewire events.
+- **Dynamic Data Handling**: Pass data seamlessly to your modals, making them fully dynamic.
 
--   [Mehedi Hasan Sagor](https://github.com/mehedi hasan sagor)
--   [All Contributors](../../contributors)
+## SEO Considerations
+
+This Laravel Livewire modal package is designed to be lightweight and versatile, providing developers with an easy way to implement customizable modals across different design frameworks. Whether you're using Bootstrap, Tailwind CSS, or custom styles, this package adapts to your needs without locking you into specific CSS libraries. Enhance your Laravel projects with a modular and framework-agnostic approach to modals.
+
+## Support
+
+For any issues or feature requests, feel free to [open an issue](https://github.com/sagor110090/livewire-modal/issues) on GitHub.
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This package is open-source software licensed under the [MIT license](LICENSE.md).
 
-## Laravel Package Boilerplate
+---
 
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+This README includes a version badge at the top, which is automatically generated and updated based on your latest release on GitHub or Packagist.
