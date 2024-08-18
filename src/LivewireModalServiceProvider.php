@@ -45,17 +45,19 @@ class LivewireModalServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
 
-            $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'livewire-modal');
-
-            $this->publishes(
-                [__DIR__ . '/../../resources/views' => resource_path('views/vendor/livewire-modal')],
-                ['livewire-modal', 'livewire-modal:views']
-            );
-
-            Livewire::component('modals', Modals::class);
+            
 
 
         }
+
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'livewire-modal');
+
+        $this->publishes(
+            [__DIR__ . '/../../resources/views' => resource_path('views/vendor/livewire-modal')],
+            ['livewire-modal', 'livewire-modal:views']
+        );
+
+        Livewire::component('modals', Modals::class);
     }
 
     /**
