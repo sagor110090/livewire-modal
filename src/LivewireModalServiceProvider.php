@@ -66,10 +66,10 @@ class LivewireModalServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'livewire-modal ');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'livewire-modal');
 
         // Register the main class to use with the facade
-        $this->app->singleton('livewire-modal ', function () {
+        $this->app->singleton('livewire-modal', function () {
             return new LivewireModal;
         });
     }
