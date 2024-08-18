@@ -50,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sagor110090\\LivewireModal\\LivewireModalServiceProvider"
+                "Sagor110090\\LivewireModal\\Providers\\LaravelLivewireModalsProvider"
             ],
             "aliases": {
                 "LivewireModal": "Sagor110090\\LivewireModal\\LivewireModalFacade"
