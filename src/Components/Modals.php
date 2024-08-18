@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire;
-
-use Livewire\Attributes\On;
+namespace Sagor110090\LivewireModal\Components; 
+ 
 use Livewire\Component;
+use Livewire\Attributes\On;
 
 class Modals extends Component
 {
