@@ -1,5 +1,6 @@
  
-  document.addEventListener('alpine:init', () => {
+document.body.setAttribute('x-data', 'loader');  
+document.addEventListener('alpine:init', () => {
     Alpine.data("loader", () => ({
       isLoading: false,
       loadingStart() {
@@ -29,8 +30,5 @@
     }));
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the loader component globally on the body tag
-    const loaderInstance = document.body.setAttribute('x-data', 'loader');
-  });
+ 
  
