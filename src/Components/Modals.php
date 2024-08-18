@@ -16,7 +16,7 @@ class Modals extends Component
     #[On('openModal')]
     public function openModal($component, $data)
     {
-        // dd($data);
+         dd($data);
         $this->resetErrorBag();
         $this->show = true;
         $this->component = $component;
