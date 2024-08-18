@@ -1,4 +1,4 @@
-Here’s an updated version of the README with the package version included at the top:
+Here’s an updated version of the README including the necessary import statements in `app.js` for the JavaScript and CSS files:
 
 ---
 
@@ -20,6 +20,13 @@ You can install the package via Composer:
 
 ```bash
 composer require sagor110090/livewire-modal
+```
+
+After installation, make sure to import the required JavaScript and CSS files in your `resources/js/app.js`:
+
+```js
+import '../../vendor/sagor110090/livewire-modal/resources/js/loader.js';
+import '../../vendor/sagor110090/livewire-modal/resources/css/loader.css';
 ```
 
 ## Usage
@@ -120,7 +127,4 @@ For any issues or feature requests, feel free to [open an issue](https://github.
 ## License
 
 This package is open-source software licensed under the [MIT license](LICENSE.md).
-
----
-
-This README includes a version badge at the top, which is automatically generated and updated based on your latest release on GitHub or Packagist.
+ 
