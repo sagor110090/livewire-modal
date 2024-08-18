@@ -1,5 +1,5 @@
-{
-    "name": "mehedi hasan sagor/livewire modal ",
+{ 
+    "name": "sagor110090/livewire-modal",
     "description": "This Laravel Livewire package simplifies the implementation of dynamic, responsive modals in your web applications. With a focus on seamless integration and flexibility, this package allows developers to easily create and manage modals without the need for JavaScript or additional front-end dependencies. Featuring out-of-the-box support for multiple modal instances, dynamic content, and customizable design options, it’s perfect for crafting modern, interactive interfaces. Whether you need confirmation dialogs, form modals, or notification pop-ups, this package delivers a clean, reusable solution for your Livewire-powered applications.",
     "keywords": [
         "mehedi hasan sagor",
