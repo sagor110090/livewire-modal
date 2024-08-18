@@ -1,5 +1,4 @@
- 
-# Laravel Livewire Modal Package
+ # Laravel Livewire Modal Package
 
 [![Latest Version](https://img.shields.io/github/v/release/sagor110090/livewire-modal.svg?style=flat-square)](https://packagist.org/packages/sagor110090/livewire-modal)
 
@@ -19,7 +18,15 @@ You can install the package via Composer:
 composer require sagor110090/livewire-modal
 ```
 
-After installation, make sure to import the required JavaScript and CSS files in your `resources/js/app.js`:
+### Setup
+
+Add the following to your `app.blade.php` layout to enable modals throughout your application:
+
+```blade
+<livewire:modals/>
+```
+
+Include the required JavaScript and CSS files in your `resources/js/app.js`:
 
 ```js
 import '../../vendor/sagor110090/livewire-modal/resources/js/loader.js';
@@ -119,9 +126,8 @@ This Laravel Livewire modal package is designed to be lightweight and versatile,
 
 ## Support
 
-For any issues or feature requests, feel free to [open an issue](https://github.com/sagor110090/livewire-modal/issues) on GitHub.
+For any issues or feature requests, feel free to [open an issue](https://github.com/sagor110090/livewire-modal/issues).
 
 ## License
 
 This package is open-source software licensed under the [MIT license](LICENSE.md).
- 
