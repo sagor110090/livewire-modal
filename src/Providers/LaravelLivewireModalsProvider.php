@@ -1,6 +1,6 @@
 <?php
 
-namespace Sagor110090\LivewireModal;
+namespace Sagor110090\LivewireModal\Providers;
 
 
 use Sagor110090\LivewireModal\Components\Modals;
