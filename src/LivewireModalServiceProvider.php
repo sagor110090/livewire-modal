@@ -3,7 +3,7 @@
 namespace Sagor110090\LivewireModal;
 
 
-use AliQasemzadeh\LaravelLivewireModals\Components\Modals;
+use Sagor110090\LivewireModal\Components\Modals;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
