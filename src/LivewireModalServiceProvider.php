@@ -1,8 +1,11 @@
 <?php
 
-namespace MehediHasanSagor\LivewireModal;
+namespace Sagor110090\LivewireModal;
 
+
+use AliQasemzadeh\LaravelLivewireModals\Components\Modals;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class LivewireModalServiceProvider extends ServiceProvider
 {
@@ -20,9 +23,9 @@ class LivewireModalServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('livewire modal .php'),
-            ], 'config');
+            // $this->publishes([
+            //     __DIR__.'/../config/config.php' => config_path('livewire modal .php'),
+            // ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
@@ -41,6 +44,17 @@ class LivewireModalServiceProvider extends ServiceProvider
 
             // Registering package commands.
             // $this->commands([]);
+
+            $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'livewire-bootstrap-modal');
+
+            $this->publishes(
+                [__DIR__ . '/../../resources/views' => resource_path('views/vendor/livewire-bootstrap-modal')],
+                ['livewire-bootstrap-modal', 'livewire-bootstrap-modal:views']
+            );
+
+            Livewire::component('modals', Modals::class);
+
+
         }
     }
 
@@ -50,10 +64,10 @@ class LivewireModalServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'livewire modal ');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'livewire-modal ');
 
         // Register the main class to use with the facade
-        $this->app->singleton('livewire modal ', function () {
+        $this->app->singleton('livewire-modal ', function () {
             return new LivewireModal;
         });
     }

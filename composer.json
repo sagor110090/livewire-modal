@@ -1,11 +1,16 @@
-{ 
+{
     "name": "sagor110090/livewire-modal",
     "description": "This Laravel Livewire package simplifies the implementation of dynamic, responsive modals in your web applications. With a focus on seamless integration and flexibility, this package allows developers to easily create and manage modals without the need for JavaScript or additional front-end dependencies. Featuring out-of-the-box support for multiple modal instances, dynamic content, and customizable design options, it’s perfect for crafting modern, interactive interfaces. Whether you need confirmation dialogs, form modals, or notification pop-ups, this package delivers a clean, reusable solution for your Livewire-powered applications.",
     "keywords": [
         "mehedi hasan sagor",
-        "livewire modal "
+        "laravel",
+        "livewire",
+        "modal",
+        "modal component",
+        "sagor110090",
+        "livewire-modal"
     ],
-    "homepage": "https://github.com/mehedi hasan sagor/livewire modal ",
+    "homepage": "https://github.com/sagor110090/livewire-modal ",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,7 +21,8 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0|^8.1|^8.2", 
+        "php": "^7.4|^8.0|^8.1|^8.2",
+        "laravel/framework": "^8.0|^9.0|^10.0|^11.0",
         "livewire/livewire": "^3.0"
     },
     "require-dev": {
@@ -25,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MehediHasanSagor\\LivewireModal\\": "src"
+            "Sagor110090\\LivewireModal\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MehediHasanSagor\\LivewireModal\\Tests\\": "tests"
+            "Sagor110090\\LivewireModal\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MehediHasanSagor\\LivewireModal\\LivewireModalServiceProvider"
+                "Sagor110090\\LivewireModal\\LivewireModalServiceProvider"
             ],
             "aliases": {
-                "LivewireModal": "MehediHasanSagor\\LivewireModal\\LivewireModalFacade"
+                "LivewireModal": "Sagor110090\\LivewireModal\\LivewireModalFacade"
             }
         }
     }

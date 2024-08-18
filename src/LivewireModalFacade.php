@@ -1,6 +1,6 @@
 <?php
 
-namespace MehediHasanSagor\LivewireModal;
+namespace Sagor110090\LivewireModal;
 
 use Illuminate\Support\Facades\Facade;
 
