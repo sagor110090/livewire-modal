@@ -50,10 +50,10 @@ class LivewireModalServiceProvider extends ServiceProvider
 
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'livewire-modal');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'livewire-modal');
 
         $this->publishes(
-            [__DIR__ . '/../../resources/views' => resource_path('views/vendor/livewire-modal')],
+            [__DIR__ . '/../resources/views' => resource_path('views/vendor/livewire-modal')],
             ['livewire-modal', 'livewire-modal:views']
         );
 
